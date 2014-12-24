@@ -1,3 +1,5 @@
+IFS=
+
 replace() {
   sed -i "s/{$1}/$2/g" bower.json package.json Gruntfile.js _README.md
 }
