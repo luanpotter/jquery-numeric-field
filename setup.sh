@@ -8,7 +8,7 @@ replaceArg() {
   echo "$1: "
   read value
   replace $1 $value
-  return_value= $value
+  return_value= "$value"
 }
 
 ./config.sh
