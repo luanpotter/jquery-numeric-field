@@ -17,7 +17,7 @@ replaceArg 'name'
 replaceArg 'desc'
 replaceArg 'repo'
 replaceArg 'keywords'
-replaceArgs 'main-file'
+replaceArg 'main-file'
 
 echo 'Done!'
 
