@@ -2,13 +2,13 @@
   "name": "{name}",
   "version": "0.1.0",
   "description": "{desc}",
-  "author": "Luan Nico <luannico27@gmail.com>",
+  "author": "{name-email}",
   "repository": {
     "type": "git",
-    "url": "https://github.com/luanpotter/{repo}"
+    "url": "https://github.com/{github-username}/{repo}"
   },
   "bugs": {
-    "url": "https://github.com/luanpotter/{repo}/issues"
+    "url": "https://github.com/{github-username}/{repo}/issues"
   },
   "keywords": [
     {keywords}
