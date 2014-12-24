@@ -8,6 +8,7 @@ replaceArg() {
   echo "$1: "
   read value
   replace $1 $value
+  return $value
 }
 
 ./config.sh
@@ -17,9 +18,11 @@ replace 'github-username' $GITHUB
 
 replaceArg 'name'
 replaceArg 'desc'
-replaceArg 'repo'
+repo= replaceArg 'repo'
 replaceArg 'keywords'
 replaceArg 'main-file'
+
+git remote set-url origin "git@github.com:${NAME}/${REPO}.git"
 
 echo 'Done!'
 
