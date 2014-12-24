@@ -27,5 +27,6 @@ echo 'Replacing README...'
 mv _README.md README.md
 
 echo 'Deleting this script...'
+rm config.sh
 rm setup.sh
 

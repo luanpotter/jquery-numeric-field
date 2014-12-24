@@ -14,4 +14,4 @@ This pack includes:
 
 Forking?
 ======
-To use it for yourself, you need to change the following files:
+To use it for yourself, you need to change the file config.sh to setup your github username, name and email.
