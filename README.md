@@ -1,9 +1,18 @@
 js-base
 =======
 Just a simple collection of preconfigured stuff, allows for easily starting your js lib right on track.  
-This is configured with my name and github accounts, but fell free to fork it and change that.  
+If you want to use it, you will have to fork it to change the default configs.  
 Once setup, just clone and run setup.sh -- it will do everything.  
 Run grunt to build (it will run a simple test that I created that can be used as a base too).  
+
+How-to
+======
+Once forked and configured:
+ * create the new repo in github.com
+ * clone your fork
+ * rename folder
+ * run setup.sh and fill the info
+ * commit!
 
 Features
 =======
@@ -11,6 +20,7 @@ This pack includes:
  * node, packages.json so we can use grunt
  * bower, already setup with qunit and jquery dependencies
  * grunt, already setup to build, run tests, etc
+ * a simple jquery plugin structure and a qunit test for it (can be changed!)
 
 Forking?
 ======
