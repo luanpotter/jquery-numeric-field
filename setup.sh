@@ -8,7 +8,7 @@ replaceArg() {
   echo "$1: "
   read value
   replace $1 $value
-  return $value
+  return_value= $value
 }
 
 ./config.sh
@@ -18,7 +18,10 @@ replace 'github-username' $GITHUB
 
 replaceArg 'name'
 replaceArg 'desc'
-repo= replaceArg 'repo'
+
+replaceArg 'repo'
+REPO= $return_value
+
 replaceArg 'keywords'
 replaceArg 'main-file'
 
