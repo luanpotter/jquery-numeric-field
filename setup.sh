@@ -8,7 +8,7 @@ replaceArg() {
   echo "$1: "
   read value
   replace $1 $value
-  return_value= "$value"
+  RETURN_VALUE="$value"
 }
 
 ./config.sh
@@ -20,7 +20,7 @@ replaceArg 'name'
 replaceArg 'desc'
 
 replaceArg 'repo'
-REPO= $return_value
+REPO="$RETURN_VALUE"
 
 replaceArg 'keywords'
 replaceArg 'main-file'
