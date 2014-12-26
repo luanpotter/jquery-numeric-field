@@ -11,7 +11,7 @@ replaceArg() {
   RETURN_VALUE="$value"
 }
 
-./config.sh
+source config.sh
 
 replace 'name-email' $NAME
 replace 'github-username' $GITHUB
