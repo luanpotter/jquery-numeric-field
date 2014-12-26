@@ -9,7 +9,8 @@ How-to
 ======
 Once forked and configured:
  * create the new repo in github.com
- * clone your fork
+ * activate travis and code climate for it
+ * clone your js-base fork
  * rename folder
  * run setup.sh and fill the info
  * commit!
@@ -20,8 +21,9 @@ This pack includes:
  * node, packages.json so we can use grunt
  * bower, already setup with qunit and jquery dependencies
  * grunt, already setup to build, run tests, etc
- * a simple jquery plugin structure and a qunit test for it (can be changed!)
+ * a simple jquery plugin structure and a qunit test for it (can be changed to other hs libs, of course)
 
 Forking?
 ======
 To use it for yourself, you need to change the file config.sh to setup your github username, name and email.
+Conveniently, you can fork this repo for you so you don't need to change it all the time.
