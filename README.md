@@ -9,8 +9,12 @@ Simple numeric fields with jquery.
 
 Setup
 ======
+Contributions are more than welcome!
 
-    git clone git@github.com:luanpotter/jquery-numeric-field.git && cd jquery-numeric-field # clone
+    # clone
+    git clone git@github.com:luanpotter/jquery-numeric-field.git
+    cd jquery-numeric-field
+
     npm install # install grunt and dependencies
     grunt # run tests and builds dist
 
