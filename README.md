@@ -5,7 +5,9 @@ numeric-field
 [![Code Climate](https://img.shields.io/codeclimate/github/luanpotter/jquery-numeric-field.svg)](https://codeclimate.com/github/luanpotter/jquery-numeric-field)
 [![BowerVersion](https://img.shields.io/bower/v/luanpotter/jquery-numeric-field.svg)](http://bower.io/#getting-started)
 
-Simple numeric fields with jquery.
+Simple numeric fields with jQuery.  
+Works with user input, copy-pasted texts -- all scenarios, no hacks.  
+Blazing fast and 4K small.  
 
 Install
 ======
