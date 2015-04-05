@@ -43,8 +43,7 @@ E.g.:
 You can fetch the value of the field as a number with `numericValue()`:
 
     var number = $('input[type="text"]').numericValue(); // 10
-    console.log(number + 2);
-    // 12, instead of 102
+    return number + 2; // 12, instead of 102
 
 And that is pretty much it. See more details on the source code, it's very, very tiny and instructive.
 
