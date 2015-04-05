@@ -8,24 +8,6 @@
 (function ($) {
     "use strict";
 
-    var replaceAll = function(src, find, replacement) {
-        var cleanForRegex = function(str) {
-            return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
-        };
-        return src.replace(new RegExp(cleanForRegex(find), 'g'), replacement);
-    };
-
-    $.fn.numericValue = function () {
-        var settings = this.data('__jquery.plugin.numericField');
-        if (typeof settings === 'undefined') {
-            throw new Error('numericValue function called on non-initialized object. You must first call numericField to set it up.');
-        }
-        if (settings.integer) {
-            return parseInt(this.val());
-        }
-        return parseFloat(replaceAll(this.val(), settings.decimal, '.'));
-    };
-
     $.fn.numericField = function (options) {
         var settings = $.extend({
             integer: true, //If it has to be an integer or can be a rational
@@ -90,4 +72,23 @@
 
         return this;
     };
+
+    $.fn.numericValue = function () {
+        var replaceAll = function(src, find, replacement) {
+            var cleanForRegex = function(str) {
+                return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+            };
+            return src.replace(new RegExp(cleanForRegex(find), 'g'), replacement);
+        };
+
+        var settings = this.data('__jquery.plugin.numericField');
+        if (typeof settings === 'undefined') {
+            throw new Error('numericValue function called on non-initialized object. You must first call numericField to set it up.');
+        }
+        if (settings.integer) {
+            return parseInt(this.val());
+        }
+        return parseFloat(replaceAll(this.val(), settings.decimal, '.'));
+    };
+
 }(jQuery));
