@@ -1,14 +1,14 @@
 {
-  "name": "{name}",
+  "name": "jquery-numeric-field",
   "version": "0.1.0",
-  "homepage": "https://github.com/luanpotter/{repo}",
+  "homepage": "https://github.com/luanpotter/jquery-numeric-field",
   "authors": [
     "Luan Nico <luannico27@gmail.com>"
   ],
-  "description": "{desc}",
-  "main": "{main-file}",
+  "description": "Simple numeric fields with jquery.",
+  "main": "numeric-field.js",
   "keywords": [
-    {keywords}
+    "jquery", "numeric", "field"
   ],
   "license": "MIT",
   "ignore": [
