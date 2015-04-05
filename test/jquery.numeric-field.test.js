@@ -39,17 +39,17 @@
 
   QUnit.test("numericField decimal disallow multiple chars", function(assert) {
     assert.throws(function() {
-        input().numericField({ decimal : '..' });
+      input().numericField({ decimal : ".." });
     }, function (e) {
-        return e.message === 'The decimal separator must have a single character.';
+      return e.message === "The decimal separator must have a single character.";
     });
   });
 
   QUnit.test("numericField decimal disallow digit", function(assert) {
     assert.throws(function() {
-        input().numericField({ decimal : '2' });
+      input().numericField({ decimal : "2" });
     }, function (e) {
-        return e.message === 'The decimal separator cannot be a digit (0-9).';
+      return e.message === "The decimal separator cannot be a digit (0-9).";
     });
   });
 
@@ -79,5 +79,31 @@
     assert.equal(el.val(), "12");
   });
 
+  QUnit.test("numericValue", function(assert) {
+    var el = input().numericField();
+    type(el, "a1a2a0;;");
+    assert.ok(el.numericValue() === 120);
+  });
+
+  QUnit.test("numericValue float", function(assert) {
+    var el = input().numericField({ integer : false });
+    type(el, "a1a2a0;;");
+    assert.ok(el.numericValue() === 120.0);
+  });
+
+  QUnit.test("numericValue float custom separator", function(assert) {
+    var el = input().numericField({ integer : false, decimal : ')' });
+    type(el, "a1a2a0;;)21");
+    assert.ok(el.numericValue() === 120.21);
+  });
+
+  QUnit.test("numericValue fails if non-initialized", function(assert) {
+    var el = input();
+    assert.throws(function() {
+      el.numericValue();
+    }, function(e) {
+      return e.message === "numericValue function called on non-initialized object. You must first call numericField to set it up.";
+    });
+  });
 
 }(jQuery));
