@@ -6,7 +6,7 @@
     "Luan Nico <luannico27@gmail.com>"
   ],
   "description": "Simple numeric fields with jquery.",
-  "main": "numeric-field.js",
+  "main": "src/jquery.numeric-field.js",
   "keywords": [
     "jquery", "numeric", "field"
   ],
@@ -19,7 +19,8 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.3"
+    "jquery": "~2.1.3",
+    "cursor-manager" : "~0.1.0"
   },
   "devDependencies": {
     "qunit": "~1.16.0"
