@@ -1,4 +1,4 @@
-jquery-numeric-field
+numeric-field
 =====================
 
 [![Build Status](https://img.shields.io/travis/luanpotter/jquery-numeric-field.svg)](https://travis-ci.org/luanpotter/jquery-numeric-field)
@@ -13,3 +13,8 @@ Setup
     git clone git@github.com:luanpotter/jquery-numeric-field.git && cd jquery-numeric-field # clone
     npm install # install grunt and dependencies
     grunt # run tests and builds dist
+
+Bower
+======
+
+    bower install numeric-field
