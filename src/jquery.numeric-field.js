@@ -19,6 +19,13 @@
 
         var NUMBERS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
+        if (settings.decimal.length !== 1) {
+            throw new Error('The decimal separator must have a single character.');
+        }
+        if (!isNaN(settings.decimal)) {
+            throw new Error('The decimal separator cannot be a digit (0-9).');
+        }
+
         if (settings.auto_update && (settings.min !== null || settings.max !== null)) {
             this.bind('blur', function () {
                 var num = parseFloat($(this).val());

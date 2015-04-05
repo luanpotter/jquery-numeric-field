@@ -37,6 +37,22 @@
     assert.equal(el.val(), "123;456");
   });
 
+  QUnit.test("numericField decimal disallow multiple chars", function(assert) {
+    assert.throws(function() {
+        input().numericField({ decimal : '..' });
+    }, function (e) {
+        return e.message === 'The decimal separator must have a single character.';
+    });
+  });
+
+  QUnit.test("numericField decimal disallow digit", function(assert) {
+    assert.throws(function() {
+        input().numericField({ decimal : '2' });
+    }, function (e) {
+        return e.message === 'The decimal separator cannot be a digit (0-9).';
+    });
+  });
+
   QUnit.test("numericField min non-negative only", function(assert) {
     var el = input().numericField({ min : 0  });
     type(el, "-123");
